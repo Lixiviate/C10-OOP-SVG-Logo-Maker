@@ -1,1 +1,1 @@
-# C10-OOP-SVG-Logo-Maker
+# C10-SVG-Logo-Maker
