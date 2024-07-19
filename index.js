@@ -7,7 +7,8 @@ const questions = [
     type: "input",
     name: "text",
     message: "What 3 letters would you like inside your SVG?",
-    validate: (input) => input.length <= 3,
+    validate: (input) =>
+      input.length <= 3 || "Text must be 3 characters or less",
   },
   {
     type: "input",
@@ -29,7 +30,20 @@ const questions = [
   },
 ];
 
-function generateShape(text, textColor, shape, shapeColor) {}
+function generateShape(text, textColor, shape, shapeColor) {
+  let shapeInput;
+  switch (shape) {
+    case "Triangle":
+      shapeInput = new Triangle();
+      break;
+    case "Circle":
+      shapeInput = new Circle();
+      break;
+    case "Square":
+      shapeInput = new Square();
+      break;
+  }
+}
 
 function writeToFile(fileName, data) {
   fs.writeFileSync(fileName, data);
