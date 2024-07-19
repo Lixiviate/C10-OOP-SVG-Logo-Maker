@@ -1,6 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const { Triangle, Circle, Square } = require("./lib/shapes");
+const { Triangle, Circle, Square } = require("./lib/shapes.js");
 
 const questions = [
   {
@@ -34,15 +34,16 @@ function generateShape(text, textColor, shape, shapeColor) {
   let shapeInput;
   switch (shape) {
     case "Triangle":
-      shapeInput = new Triangle();
+      shapeInput = new Triangle(text, textColor, shapeColor);
       break;
     case "Circle":
-      shapeInput = new Circle();
+      shapeInput = new Circle(text, textColor, shapeColor);
       break;
     case "Square":
-      shapeInput = new Square();
+      shapeInput = new Square(text, textColor, shapeColor);
       break;
   }
+  return shapeInput.render();
 }
 
 function writeToFile(fileName, data) {
@@ -52,7 +53,12 @@ function writeToFile(fileName, data) {
 
 function init() {
   inquirer.prompt(questions).then((answers) => {
-    const svgData = generateShape(answers);
+    const svgData = generateShape(
+      answers.text,
+      answers.textColor,
+      answers.shape,
+      answers.shapeColor
+    );
     writeToFile("logo.svg", svgData);
   });
 }
