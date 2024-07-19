@@ -5,7 +5,7 @@ const { Triangle, Circle, Square } = require("./lib/shapes.js");
 const questions = [
   {
     type: "input",
-    name: "text",
+    name: "userText",
     message: "What 3 letters would you like inside your SVG?",
     validate: (input) =>
       input.length <= 3 || "Text must be 3 characters or less",
@@ -30,17 +30,17 @@ const questions = [
   },
 ];
 
-function generateShape(text, textColor, shape, shapeColor) {
+function generateShape(userText, textColor, shape, shapeColor) {
   let shapeInput;
   switch (shape) {
     case "Triangle":
-      shapeInput = new Triangle(text, textColor, shapeColor);
+      shapeInput = new Triangle(userText, textColor, shapeColor);
       break;
     case "Circle":
-      shapeInput = new Circle(text, textColor, shapeColor);
+      shapeInput = new Circle(userText, textColor, shapeColor);
       break;
     case "Square":
-      shapeInput = new Square(text, textColor, shapeColor);
+      shapeInput = new Square(userText, textColor, shapeColor);
       break;
   }
   return shapeInput.render();
@@ -54,7 +54,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions).then((answers) => {
     const svgData = generateShape(
-      answers.text,
+      answers.userText,
       answers.textColor,
       answers.shape,
       answers.shapeColor
