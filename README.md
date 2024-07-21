@@ -35,6 +35,8 @@ A command-line application designed to quickly generate simple SVG logos. This t
 
 - Created by [Lixiviate](https://github.com/Lixiviate)
 - Code assistance from:
+  - [Jest Docs](https://jestjs.io/)
+  - [Inquirer.js Docs](https://www.npmjs.com/package/inquirer/v/8.2.4)
   - [MDN Web Docs](https://developer.mozilla.org/en-US/)
   - [W3Schools](https://www.w3schools.com/)
   - [edX Xpert Learning Assistant](https://www.edx.org/)
