@@ -16,7 +16,7 @@ A command-line application designed to quickly generate simple SVG logos. This t
 1. Clone the repository: `git clone https://github.com/Lixiviate/C10-SVG-Logo-Maker.git`
 2. Install the necessary dependencies: `npm install`
 3. Run the application: `npm start`
-4. Follow the prompts to enter text, select colors, and choose a shape.
+4. Follow the prompts to enter text, select colors (use color keywords or hexadecimal values starting with #), and choose a shape.
 5. The generated logo.svg file will be saved in the project directory.
 
 ## Example(s)
