@@ -21,7 +21,7 @@ A command-line application designed to quickly generate simple SVG logos. This t
 
 ## Example(s)
 
-[Walkthrough Video]()
+[Walkthrough Video](https://drive.google.com/file/d/1I5ouRpaxMYQ5vAAtgdm_3KbWUhoBwu4A/view)
 
 **CLI Example:**
 
