@@ -8,7 +8,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest --testPathPattern=lib",
+    "test": "jest",
     "start": "node index.js"
   },
   "keywords": [],

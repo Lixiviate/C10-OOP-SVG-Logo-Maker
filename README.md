@@ -19,11 +19,15 @@ A command-line application designed to quickly generate simple SVG logos. This t
 4. Follow the prompts to enter text, select colors, and choose a shape.
 5. The generated logo.svg file will be saved in the project directory.
 
-## Example
+## Example(s)
 
 [Walkthrough Video]()
 
+**CLI Example:**
+
 ![CLI Example](./examples/cli_example.png)
+
+**SVG Example:**
 
 ![SVG Example](./examples/logo_example.svg)
 
